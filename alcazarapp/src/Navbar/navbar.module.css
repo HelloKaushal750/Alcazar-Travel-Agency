@@ -1,0 +1,17 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+.Navbar_Items {
+    font-size: 15px;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    align-items: center;
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+.NavbarDiv{
+    padding-top: 16px;
+    color: white;
+}
