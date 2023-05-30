@@ -1,4 +1,5 @@
 import "./CSS/ReviewBooking.css";
+import SimpleImageSlider from "react-simple-image-slider";
 import {
   Heading,
   Highlight,
@@ -10,6 +11,25 @@ import {
 import { useDisclosure, Button, Box } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+const images = [
+  {
+    url: "https://img.freepik.com/free-photo/breathtaking-scenery-amazing-landscape-view_181624-19152.jpg?size=626&ext=jpg&ga=GA1.1.1765068721.1684903380&semt=location_fest_v1"
+  },
+  {
+    url: "https://img.freepik.com/free-photo/beautiful-landscape-beach-sea-ocean-with-empty-chair-deck-umbrella-nearly-coconut-palm-tree-with-white-cloud-blue-sky_74190-9982.jpg?size=626&ext=jpg&ga=GA1.1.1765068721.1684903380&semt=location_fest_v1",
+  },
+  {
+    url: "https://img.freepik.com/premium-photo/creative-background-red-suitcase-sneakers-plane-blue-background_99433-28.jpg?size=626&ext=jpg&ga=GA1.1.1765068721.1684903380&semt=ais",
+  },
+  {
+    url: "https://img.freepik.com/premium-photo/lover-woman-man-asian-travel-nature-travel-relax-natural-park-moutain-thailand_36074-492.jpg?size=626&ext=jpg&ga=GA1.1.1765068721.1684903380&semt=location_fest_v1",
+  },
+  // { url: "images/4.jpg" },
+  // { url: "images/5.jpg" },
+  // { url: "images/6.jpg" },
+  // { url: "images/7.jpg" },
+];
 
 function ReviewBooking({ step }) {
   const [code, setCode] = useState("");
@@ -51,7 +71,7 @@ function ReviewBooking({ step }) {
       <div className="container-left">
         <h1 className="heading1">Booking Summary</h1>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <h3 style={{ fontWeight: "600", fontSize:"20px" }}>
+          <h3 style={{ fontWeight: "600", fontSize: "20px" }}>
             {bookedData.location} for All -{" "}
           </h3>
           <Heading size={10} textAlign={"left"} fontWeight={"600"}>
@@ -159,7 +179,7 @@ function ReviewBooking({ step }) {
                 textAlign: "left",
                 fontSize: "20px",
                 marginTop: "-15px",
-                fontWeight:"600"
+                fontWeight: "600",
               }}
             >
               <tr>
@@ -243,12 +263,22 @@ function ReviewBooking({ step }) {
         </div>
       </div>
       <div className="container-right">
-        <video autoPlay loop muted>
+        <SimpleImageSlider
+          width="38.6%"
+          height={490}
+          images={images}
+          showBullets={true}
+          slideDuration={1}
+          autoPlay={true}
+          autoPlayDelay={2}
+        />
+
+        {/* <video autoPlay loop muted>
           <source
             src="vacation1.mp4"
             type="video/mp4"
           />
-        </video>
+        </video> */}
       </div>
     </div>
   );
