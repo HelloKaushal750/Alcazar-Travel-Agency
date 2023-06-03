@@ -18,7 +18,8 @@ const initialState = {
     },
     otp:{
         f:"1",s:"1",t:"1",fo:"1",fi:"1"
-    }
+    },
+    userName: "Kaushal"
 }
 
 const reducer = (store=initialState,action)=>{
