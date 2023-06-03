@@ -132,7 +132,7 @@ const ProductList = () => {
   All
 </button>
 <button
-  className={`filter-buttont ${selectedFilter === 'Trending' ? 'active' : ''}`}
+  className={`filter-button ${selectedFilter === 'Trending' ? 'active' : ''}`}
   onClick={() => filterItems('Trending')}
 >
   Trending
@@ -156,7 +156,7 @@ const ProductList = () => {
   Recommend
 </button>
 <button
-  className={`filter-buttond ${selectedFilter === 'Tour Packages' ? 'active' : ''}`}
+  className={`filter-button ${selectedFilter === 'Tour Packages' ? 'active' : ''}`}
   onClick={() => filterItems('Tour Packages')}
 >
   Tour Packages
@@ -170,6 +170,7 @@ const ProductList = () => {
               <div className="location">{product.location}</div>
               <div className="price">{product.price}</div>
             </div>
+            <hr className="line" />
             <p>
               {isCardExpanded(product.id)
                 ? product.description
