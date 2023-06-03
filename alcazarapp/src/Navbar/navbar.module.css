@@ -1,5 +1,5 @@
 *{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato';
 }
 
 .Navbar_Items {
@@ -12,6 +12,6 @@
 }
 
 .NavbarDiv{
-    padding-top: 16px;
-    color: white;
+
+   color: white;
 }
