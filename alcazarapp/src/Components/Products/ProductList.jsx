@@ -5,9 +5,9 @@ import './ProductList.css';
 
 const ProductList = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [currentItems, setCurrentItems] = useState(data.slice(0, 6)); // Initial page with 6 items
-  const [totalPages, setTotalPages] = useState(Math.ceil(data.length / 6)); // Total pages based on initial data
-  const itemsPerPage = 6; // 3 cards in each row * 2 rows = 6 items per page
+  const [currentItems, setCurrentItems] = useState(data.slice(0, 6));
+  const [totalPages, setTotalPages] = useState(Math.ceil(data.length / 6)); 
+  const itemsPerPage = 6; 
   const [selectedFilter, setSelectedFilter] = useState('All');
   
   const paginate = (pageNumber) => {
@@ -75,21 +75,21 @@ const ProductList = () => {
 
     setFilteredItems(filteredItems);
 
-    // Update the total number of pages based on the filtered items
+   
     const newTotalPages = Math.ceil(filteredItems.length / itemsPerPage);
     setTotalPages(newTotalPages);
   };
 
   const renderPageNumbers = () => {
     const pageNumbers = [];
-    const maxPageOptions = 3; // Display 3 page options at a time (previous, current, and next)
+    const maxPageOptions = 3; 
 
-    // Generate the page numbers to display
+    
     for (let i = 1; i <= totalPages; i++) {
       pageNumbers.push(i);
     }
 
-    // Regular handling for other pages
+    
     const previousPage = currentPage - 1;
     const nextPage = currentPage + 1;
 
