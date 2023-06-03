@@ -1,0 +1,206 @@
+.BoxBox {
+  padding: 0 0 0 10vw;
+  width: 80vw;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  width: 20vw; /* Adjust the card width */
+  height: 16vw; /* Adjust the card height */
+  margin-bottom: 1.5vw; /* Adjust the margin bottom */
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Adjust the card width */
+  grid-column-gap: 1vw;
+  grid-row-gap: 0.5vw; /* Adjust the gap between rows */
+  justify-content: center;
+  margin: 0 1vw 1vw 5vw;
+}
+
+.card img {
+  width: 100%;
+  height: 72%; /* Adjust the image height */
+  margin-bottom: 10px;
+  border-radius: 8%;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-content .location {
+  font-weight: bold;
+  font-size: smaller; /* Decrease the font size */
+}
+
+.card-content .price {
+  color: #0b0a0a;
+  font-weight: bold;
+  font-size: smaller; /* Decrease the font size */
+}
+
+.card p {
+  margin-bottom: 10px;
+  font-size: small; /* Decrease the font size */
+}
+
+.card p button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: #0051ff;
+  font-size: small; /* Decrease the font size */
+}
+
+.card p button:focus {
+  outline: none; 
+}
+
+.pagination {
+  display: flex;
+  margin-top: 0px; 
+  
+}
+
+.page-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.page-number.active {
+  background-color: #007ff7;
+  color: #fff;
+}
+
+.round-button {
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: 10vw;
+  cursor: pointer;
+ 
+}
+
+.round-button.first-page {
+  margin-right: 19vw;
+  margin-left: 5vw;
+}
+
+.round-button.last-page {
+  margin-left: 27vw;
+}
+
+.round-button.first-page{
+  width: 4vw;
+  height: 0.1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: start;
+  background-color: #ccc;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #ccc;
+  border-radius: 30px;
+  padding: 1vw;
+}
+.round-button.last-page {
+  width: 4vw;
+  height: 0.1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #ccc;
+  border-radius: 30px;
+  padding: 1vw;
+  align-self: flex-end;
+}
+
+.headingA {
+  text-align: center;
+}
+
+.filter-buttons {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  border-radius: 30px;
+  padding: 8px 16px;
+  margin-left: 1vw;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+
+.filter-buttont {
+  border-radius: 30px;
+  padding: 8px 16px;
+  margin-left: 21vw;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+.filter-buttond {
+  border-radius: 30px;
+  padding: 8px 16px;
+  margin-left: 18vw;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+.filter-buttonA {
+  border-radius: 50%;
+  padding: 1vw;
+  margin-left: 5.5vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #ccc;
+  cursor: pointer;
+}
+
+
+.filter-button.active {
+  background-color: #007ff7;
+}
+.filter-buttonA.active {
+  background-color: #007ff7;
+}
+
+.filter-button.active {
+  background-color: #007ff7;
+}
+
+.filter-buttont.active {
+  background-color: #007ff7;
+}
+
+.filter-buttond.active {
+  background-color: #007ff7;
+}
