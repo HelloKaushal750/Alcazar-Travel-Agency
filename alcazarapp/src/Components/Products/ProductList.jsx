@@ -120,7 +120,7 @@ const ProductList = () => {
     <div className="BoxBox">
       <div className="headingA">
         <h1>Guides for your next vacation</h1>
-        <h5>
+        <h5 className="headingb">
           Check out this week's selection of popular products that might catch your eye, and don't
         </h5>
       </div>
