@@ -1,0 +1,89 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+    padding: 20px;
+    border-radius: 50px;
+    background-color:#fff;
+    height: 4vw;
+    gap: 1vw;
+  flex-grow: 1;
+  box-shadow: 0 0 0 0.75vw rgb(206, 206, 206);
+  }
+  
+  .input-section {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    flex-grow: 1;
+  }
+  
+  .divider {
+    width: 0.125vw;
+    height:2.5vw;
+    background-color: #bdbdbd;
+  }
+  
+  .loc {
+    width: 15vw;
+  }
+  
+  .nm {
+    flex-grow: 1;
+  }
+  
+  .dt {
+    flex-grow: 1;
+  }
+  
+  button {
+    padding: 1.2vw;
+    color: #0073ff; /* Set the text color to white */
+    background-color: #0073ff; /* Set the background color to blue */
+    border: 1vw;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon i {
+    font-size: 1.5vw;
+  }
+
+  .location-icon {
+    color: rgb(200, 9, 9);
+  }
+
+  .sbt {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0073ff;
+  border-radius: 50%;
+  height: 3.5vw;
+  width: 3.5vw;
+  padding: 0; 
+  }
+
+  .sbt i {
+    color: white;
+    font-size: 1.5vw;
+  }
+
+  button.sbt{
+    margin-left: auto
+  }

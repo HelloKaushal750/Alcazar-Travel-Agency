@@ -31,7 +31,6 @@
 .card-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -50,6 +49,7 @@
   margin-bottom: 10px;
   font-size: 0.6vw;
   color: #6e6e6e;
+  text-align: justify;
 }
 
 .card p button {

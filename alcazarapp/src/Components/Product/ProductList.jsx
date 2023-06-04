@@ -177,13 +177,16 @@ const ProductList = () => {
       </div>
       <div className="card-grid">
         {currentItems.map((product,i) => (
-          <Link to={`/products/${product.id}`} key={i}>
+         
             <div className="card" key={product.id}>
+               <Link to={`/products/${product.id}`} key={i}>
               <img src={product.image} alt={product.location} />
+              
               <div className="card-content">
                 <div className="location">{product.location}</div>
                 <div className="price">{product.price}</div>
               </div>
+              </Link>
               <hr className="line" />
               <p>
                 {isCardExpanded(product.id)
@@ -194,7 +197,7 @@ const ProductList = () => {
                 </button>
               </p>
             </div>
-          </Link>
+         
         ))}
       </div>
       <div className="pagination">{renderPageNumbers()}</div>

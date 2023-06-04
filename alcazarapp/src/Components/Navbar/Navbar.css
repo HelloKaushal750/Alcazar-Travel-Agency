@@ -1,6 +1,27 @@
 
-
 .NavbarDiv{
-   color: white;
-   background-color: black;
+   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-color: black;
+  background-image: url("hiking-camp-night-campfire-man-alone-1576819-pxhere.com.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+.content {
+   margin-top: 100vh; /* Add margin equal to the height of the Navbar */
+ }
+
+ .headingAA{
+   font-size: 5vw;
+   margin-top: 5vw;
+ }
+
+ .headingAB{
+   font-size: 1vw;
+   margin-top: 1vw;
+ }

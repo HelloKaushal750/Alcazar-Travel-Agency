@@ -3,6 +3,7 @@ import { Image, Box, Flex, Button } from "@chakra-ui/react";
 
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import SearchBar from "../SearchBar/SearchBar";
 
 const Navbar = () => {
   return (
@@ -30,6 +31,19 @@ const Navbar = () => {
           </Flex>
         </Box>
       </Box>
+
+      <div className="headss">
+        <div className="headingAA">
+        <h1>
+          Travel around the world
+        </h1>
+        </div>
+        <div className="headingAB">
+        <h4>Trusted by 80 million Travelers, Aalcazar is the world's most copetetive travel, flight</h4>
+        <h4>and accommodation provider, very easy to access on your smarttree and desktop</h4>
+        </div>    
+      </div>
+      <SearchBar />
     </div>
   );
 };
