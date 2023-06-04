@@ -1,9 +1,16 @@
 import "./CSS/MiddleBooking.css";
-import { Avatar, Wrap, WrapItem, Button } from "@chakra-ui/react";
+import { Avatar, Wrap, WrapItem } from "@chakra-ui/react";
 import data from "../../db.json";
 
+import { useSelector } from "react-redux";
+
 function MiddleBooking() {
-  console.log(data);
+ 
+  const bookedDataHistory = useSelector((state)=>{
+    return state.bookingHistory;
+  })
+  console.log(bookedDataHistory);
+  
   return (
     <div className="booking_middle_container">
       <div style={{ display: "flex", justifyContent: "center" }}>
@@ -117,14 +124,16 @@ function MiddleBooking() {
               Booking History
             </h1>
             <p style={{ fontSize: "13px", color: "rgb(97, 96, 96)" }}>
-              30 Destination Found
+              {
+                bookedDataHistory.length>0 ? `${bookedDataHistory.length} DESTINATION FOUND` : <span style={{color:"red"}}>NO DESTINATION FOUND</span>
+              }
             </p>
           </div>
         </div>
 
         {/* Show Data */}
         <div className="scrolldown">
-          {data.map((item) => {
+          {bookedDataHistory.map((item) => {
             return (
               <div
                 style={{
@@ -178,11 +187,11 @@ function MiddleBooking() {
                       class="fa-solid fa-plane"
                       style={{ color: "rgb(154, 6, 6)" }}
                     ></i>
-                    &nbsp; 07-06-2023{" "}
+                    &nbsp; {item.date}
                   </p>
                 </div>
                 <div>
-                  <p>1 Adjust</p>
+                  <p>{item.tickets} Adjust</p>
                 </div>
                 <div>
                   <h3
@@ -192,7 +201,7 @@ function MiddleBooking() {
                       fontWeight: "600",
                     }}
                   >
-                    {item.price}
+                    {item.pricewithpassengers}
                   </h3>
                 </div>
               </div>

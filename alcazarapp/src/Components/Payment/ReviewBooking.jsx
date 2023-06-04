@@ -9,8 +9,9 @@ import {
   AlertIcon,
 } from "@chakra-ui/react";
 import { useDisclosure, Button, Box } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 
 const images = [
   {
@@ -32,34 +33,33 @@ const images = [
 ];
 
 function ReviewBooking({ step }) {
+  const [discount, setDiscount] = useState(0);
   const [code, setCode] = useState("");
   const [status, setStatus] = useState(false);
   const [codeStatus, setCodeStatus] = useState();
   const { isOpen, onToggle } = useDisclosure();
   const dispatch = useDispatch();
   const bookedData = useSelector((state) => {
-    return state.booked;
+    return state.bookingData;
   });
-  const grandTotal = useSelector((state) => {
-    return state.total;
-  });
+  console.log(bookedData);
+
   const promoCode = useSelector((state) => {
     return state.promocode;
   });
-
-  useEffect(() => {
-    dispatch({ type: "GRAND_TOTAL", payload: bookedData.price });
-  }, []);
 
   const handleCheck = () => {
     console.log(code, promoCode);
     setStatus(true);
     if (code === promoCode) {
       setCodeStatus(true);
-      let newTotal = 0.7 * grandTotal;
-      console.log(newTotal);
-      dispatch({ type: "GRAND_TOTAL", payload: newTotal });
-      dispatch({ type: "DISCOUNT", payload: grandTotal - newTotal });
+      let newTotal = 0.7 * bookedData.pricewithpassengers;
+      let grandTotal = newTotal.toFixed(2);
+      let newTotalP = (bookedData.pricewithpassengers - newTotal)
+      let discountedAmount = newTotalP.toFixed(2)
+      setDiscount(discountedAmount);
+      dispatch({ type: "BOOKINGDATA", payload: {...bookedData,pricewithpassengers:grandTotal} });
+
     } else {
       setCodeStatus(false);
     }
@@ -76,10 +76,10 @@ function ReviewBooking({ step }) {
           </h3>
           <Heading size={10} textAlign={"left"} fontWeight={"600"}>
             <Highlight
-              query="Premium"
+              query={bookedData.type}
               styles={{ px: "2", py: "1", rounded: "full", bg: "green.100" }}
             >
-              Premium
+              {bookedData.type}
             </Highlight>
           </Heading>
           <h3 style={{ color: "grey", fontSize: "15px" }}>
@@ -92,22 +92,22 @@ function ReviewBooking({ step }) {
             <tbody>
               <tr>
                 <td>Starting From</td>
-                <td style={{ color: "rgb(98, 96, 96)" }}>{bookedData.start}</td>
+                <td style={{ color: "rgb(98, 96, 96)" }}>Main Square, Old Town</td>
               </tr>
               <tr>
                 <td>Package Type</td>
-                <td style={{ color: "rgb(98, 96, 96)" }}>Premium</td>
+                <td style={{ color: "rgb(98, 96, 96)" }}>{bookedData.type}</td>
               </tr>
               <tr>
                 <td>Date of Travel</td>
                 <td style={{ color: "rgb(98, 96, 96)" }}>
-                  {bookedData.travelDate}
+                  {bookedData.date}
                 </td>
               </tr>
               <tr>
                 <td>No. of Travellers</td>
                 <td style={{ color: "rgb(98, 96, 96)" }}>
-                  {bookedData.traveller} Adults
+                  {bookedData.tickets} Adults
                 </td>
               </tr>
               <tr>
@@ -184,7 +184,7 @@ function ReviewBooking({ step }) {
             >
               <tr>
                 <td>Grand Total</td>
-                <td>₹ {grandTotal.toFixed(2)}</td>
+                <td>$ {bookedData.pricewithpassengers}</td>
               </tr>
             </tbody>
           </table>
@@ -215,11 +215,11 @@ function ReviewBooking({ step }) {
                 <tbody style={{ textAlign: "left", fontSize: "16px" }}>
                   <tr>
                     <td>Total Tour Cost</td>
-                    <td>₹ {bookedData.price}</td>
+                    <td>$ {bookedData.pricewithpassengers}</td>
                   </tr>
                   <tr>
                     <td>Additional Discount</td>
-                    <td>₹ {bookedData.discount}</td>
+                    <td>$ {discount}</td>
                     <td style={{ color: "blue", fontSize: "12px" }}>
                       (Use PromoCode to get 30% discount)
                     </td>
@@ -273,12 +273,6 @@ function ReviewBooking({ step }) {
           autoPlayDelay={2}
         />
 
-        {/* <video autoPlay loop muted>
-          <source
-            src="vacation1.mp4"
-            type="video/mp4"
-          />
-        </video> */}
       </div>
     </div>
   );

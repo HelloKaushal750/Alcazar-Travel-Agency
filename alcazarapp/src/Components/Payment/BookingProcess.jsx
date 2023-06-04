@@ -10,7 +10,7 @@ import {
   useSteps,
   Box,
   Heading,
-  useDisclosure
+  useDisclosure,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import React from "react";
@@ -20,6 +20,7 @@ import ReviewBooking from "./ReviewBooking";
 import Payment from "./Payment";
 import Confirmation from "./Confirmation";
 import "./CSS/BookingProcess.css";
+import Navbar from "../Navbar/Navbar";
 
 const steps = [
   { title: "Review Booking", description: "Step 1" },
@@ -42,46 +43,54 @@ function BookingProcess() {
     setActiveStep(step);
   }, [step]);
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const finalRef = React.useRef(null)
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const finalRef = React.useRef(null);
 
   return (
-    <div className="booking-process-container">
-  
-      <Heading as="h2" size="md" marginBottom={10}>
-        Book your Holidays in 4 Simple Steps
-      </Heading>
-      <Stepper style={{padding:"0 200px"}} size={"lg"} index={activeStep} colorScheme="black">
-        {steps.map((step, index) => (
-          <Step key={index}>
-            <StepIndicator>
-              <StepStatus
-                complete={<StepIcon values="1" />}
-                incomplete={<StepNumber />}
-                active={<StepNumber />}
-              />
-            </StepIndicator>
+    <div>
+      <Navbar />
+      <div className="booking-process-container">
+        <Heading as="h2" size="md" marginBottom={10}>
+          Book your Holidays in 4 Simple Steps
+        </Heading>
+        <Stepper
+          style={{ padding: "0 200px" }}
+          size={"lg"}
+          index={activeStep}
+          colorScheme="black"
+        >
+          {steps.map((step, index) => (
+            <Step key={index}>
+              <StepIndicator>
+                <StepStatus
+                  complete={<StepIcon values="1" />}
+                  incomplete={<StepNumber />}
+                  active={<StepNumber />}
+                />
+              </StepIndicator>
 
-            <Box flexShrink="0">
-              <StepTitle>{step.title}</StepTitle>
-            </Box>
-            <StepSeparator />
-          </Step>
-        ))}
-      </Stepper>
-      <div>
-        {step === 0 ? (
-          <ReviewBooking step={step} />
-        ) : step === 1 ? (
-          <Payment onOpen={onOpen} />
-        ) : step === 2 ? (
-          <OtpVerification finalRef={finalRef}
-          isOpen={isOpen}
-          onClose={onClose} />
-        ) : (
-         <Confirmation step={step} /> 
-        )}
+              <Box flexShrink="0">
+                <StepTitle>{step.title}</StepTitle>
+              </Box>
+              <StepSeparator />
+            </Step>
+          ))}
+        </Stepper>
+        <div>
+          {step === 0 ? (
+            <ReviewBooking step={step} />
+          ) : step === 1 ? (
+            <Payment onOpen={onOpen} />
+          ) : step === 2 ? (
+            <OtpVerification
+              finalRef={finalRef}
+              isOpen={isOpen}
+              onClose={onClose}
+            />
+          ) : (
+            <Confirmation step={step} />
+          )}
+        </div>
       </div>
     </div>
   );

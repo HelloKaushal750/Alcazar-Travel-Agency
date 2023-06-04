@@ -230,9 +230,9 @@ function MidSectionHome() {
             gap: "40px",
           }}
         >
-          {feedBackData.map((data) => {
+          {feedBackData.map((data,i) => {
             return (
-              <div>
+              <div key={i}>
                 <div
                   style={{
                     display: "grid",

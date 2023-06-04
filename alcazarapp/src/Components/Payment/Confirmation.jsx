@@ -2,14 +2,16 @@ import { Button } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import "./CSS/Confirmation.css";
+import { Link } from "react-router-dom";
 
 function Confirmation() {
   const dispatch = useDispatch();
-  const amount = useSelector((state) => {
-    return state.total;
+  const bookingData = useSelector((state) => {
+    return state.bookingData;
   });
   const [date, setDate] = useState();
   useEffect(() => {
+    dispatch({type:"BOOKINGHISTORY",payload:bookingData})
     setDate(Date.now());
   }, []);
   return (
@@ -38,7 +40,7 @@ function Confirmation() {
           Your transaction has been processed. Thankyou for choosing Alcazar
           Travel Agency.
         </p>
-        <Button
+        <Link to='/'><Button
           onClick={() => {
             dispatch({ type: "UPDATE_STEP", payload: 1 });
           }}
@@ -51,7 +53,7 @@ function Confirmation() {
           }}
         >
           Back to Home
-        </Button>
+        </Button></Link>
       </div>
       <div className="confirm-right-div">
         <div style={{ textAlign: "left", marginBottom: "20px", display:"flex", justifyContent:"space-between" }}>
@@ -86,7 +88,7 @@ function Confirmation() {
                   >
                     DATE
                   </p>
-                  <p>27-05-2023</p>
+                  <p>{bookingData.date}</p>
                 </td>
               </tr>
               <tr>
@@ -112,7 +114,7 @@ function Confirmation() {
                   >
                     AMOUNT
                   </p>
-                  <p>₹ {amount}</p>
+                  <p>$ {bookingData.pricewithpassengers}</p>
                 </td>
               </tr>
             </tbody>

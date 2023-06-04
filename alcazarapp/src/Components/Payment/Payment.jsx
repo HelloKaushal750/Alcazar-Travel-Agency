@@ -77,7 +77,9 @@ function Payment({onOpen}) {
 
   return (
     <div className="payment-booking-container">
-      <div className="payment-container-left"></div>
+      <div className="payment-container-left">
+        <img src="payment.png" alt="" style={{width:"100%",height:"100%",borderRadius:"10px 0 0 10px"}} />
+      </div>
       <div className="payment-container-right">
         <h1
           style={{

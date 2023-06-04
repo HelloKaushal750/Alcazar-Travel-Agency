@@ -1,13 +1,9 @@
 import "./App.css";
-import BookingProcess from "./Components/Payment/BookingProcess";
-import MyBooking from "./Components/MyBooking/MyBooking";
-import MidSectionHome from "./Components/MidSectionHome/MidSectionHome";
+import AllRoutes from "./Routes/AllRoutes";
 
 function App() {
   return <div className="App">
-    <MidSectionHome />
-    {/* <BookingProcess /> */}
-    {/* <MyBooking /> */}
+    <AllRoutes />
   </div>;
 }
 

@@ -11,12 +11,11 @@
 }
 .payment-container-left {
   width: 40%;
-  padding: 20px;
   background-color: white;
   border-radius: 10px 0 0 10px;
-  background-image: url("../Images/payment.png");
+  /* background-image: url("../Images/payment.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100%; */
 }
 .payment-container-right {
   width: 60%;

@@ -1,8 +1,15 @@
-import { Button, Collapse, useDisclosure, Avatar, AvatarBadge } from "@chakra-ui/react";
+import {
+  Button,
+  Collapse,
+  useDisclosure,
+  Avatar,
+  AvatarBadge,
+} from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import "./CSS/LeftBooking.css";
 import { location, location2 } from "./locationData";
+import { Link } from "react-router-dom";
 
 function LeftBooking() {
   const { isOpen, onToggle } = useDisclosure();
@@ -16,13 +23,16 @@ function LeftBooking() {
       <div
         style={{
           display: "flex",
-          alignItems:"center",
+          alignItems: "center",
           gap: "10px",
-          marginLeft:"-7px"
+          marginLeft: "-7px",
         }}
       >
         <div style={{ width: "30%" }}>
-          <Avatar size={"lg"} src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.2.1765068721.1684903380&semt=sph">
+          <Avatar
+            size={"lg"}
+            src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.2.1765068721.1684903380&semt=sph"
+          >
             <AvatarBadge boxSize="1em" bg="green.500" />
           </Avatar>
         </div>
@@ -47,18 +57,20 @@ function LeftBooking() {
             width: "80%",
           }}
         >
-          <div
-            style={{
-              marginLeft: "-50px",
-              display: "flex",
-              gap: "20px",
-              fontSize: "16px",
-              alignItems: "center",
-            }}
-          >
-            <i class="fa-solid fa-house-chimney"></i>
-            <h3>Homepage</h3>
-          </div>
+          <Link to={'/'}>
+            <div
+              style={{
+                marginLeft: "-50px",
+                display: "flex",
+                gap: "20px",
+                fontSize: "16px",
+                alignItems: "center",
+              }}
+            >
+              <i class="fa-solid fa-house-chimney"></i>
+              <h3>Homepage</h3>
+            </div>
+          </Link>
         </Button>
         <Button
           style={{
@@ -106,7 +118,7 @@ function LeftBooking() {
             if (i < 5) {
               return (
                 <div
-                key={i}
+                  key={i}
                   style={{
                     display: "flex",
                     fontSize: "18px",
@@ -199,7 +211,7 @@ function LeftBooking() {
           justifyContent: "center",
           alignItems: "center",
           paddingBottom: "20px",
-          marginBottom:"0px",
+          marginBottom: "0px",
           boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
         }}
       >
@@ -227,7 +239,7 @@ function LeftBooking() {
             fontSize: "16px",
             padding: "5px",
             width: "150px",
-            fontWeight:"600"
+            fontWeight: "600",
           }}
         >
           Subscribe Now

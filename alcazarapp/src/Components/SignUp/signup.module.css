@@ -1,0 +1,9 @@
+
+.background{
+    background-image: url('https://mymodernmet.com/wp/wp-content/uploads/2019/07/the-blue-border-kilian-schonberger-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+
+}
