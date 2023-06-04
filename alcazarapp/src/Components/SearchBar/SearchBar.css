@@ -31,14 +31,15 @@
   
   .loc {
     width: 15vw;
+    color: black;
   }
   
   .nm {
-    flex-grow: 1;
+   width: 11.5vw;
   }
   
   .dt {
-    flex-grow: 1;
+    width: 11vw;
   }
   
   button {

@@ -45,3 +45,20 @@
 .formbook ::placeholder {
   color: black;
 }
+.b2h{
+  cursor: pointer;
+  font-size: 5vw;
+  color: #0051ff;
+  text-align: center;
+  width: 15vw;
+  height: 7vw;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 0.5vw;
+  margin-left: 50%;
+  margin-bottom: 1vw;
+  margin-top: 0px;
+}

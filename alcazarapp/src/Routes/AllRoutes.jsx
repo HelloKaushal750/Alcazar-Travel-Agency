@@ -6,6 +6,7 @@ import HomePage from "../Components/Home/HomePage";
 import BookingProcess from "../Components/Payment/BookingProcess";
 import ProductDetailsPage from "../Components/ProductDetailsPage/ProductDetailsPage";
 import ProductList from "../Components/Product/ProductList";
+import SearchResultsPage from "../Components/SearchBar/SearchResultsPage";
 
 
 const AllRoutes = () => {
@@ -18,6 +19,7 @@ const AllRoutes = () => {
       <Route path="/payment" element={<BookingProcess />} />
       <Route path="/products" element={<ProductList />} />
       <Route path="/products/:id" element={<ProductDetailsPage />} />
+      <Route path = "/search-results" element = {<SearchResultsPage />} />
     </Routes>
   );
 };

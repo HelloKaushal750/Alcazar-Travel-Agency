@@ -106,14 +106,11 @@ const ProductDetailsPage = () => {
 
   return (
     <div>
-      <Navbar />
-      <Image
-        h={"600px"}
-        w={"1500px"}
-        src="https://wallpaperaccess.com/full/1192057.jpg"
-      />
-      {/* <Center  className={style.ImageText}>Amazing Tour </Center> */}
-
+     <div>
+      <Link to = {'/'}>
+     <div className='b2h'>Back To Home</div>
+     </Link>
+     </div>
       <Box>
         <Box display={"flex"} flexDirection={"row"}>
           <Box margin={"20px 100px"} w={"50%"}>
@@ -349,8 +346,11 @@ const ProductDetailsPage = () => {
               50 % OFF on MASAI50
             </Highlight>
           </Box>
+          
         </Box>
+      
       </Box>
+      
       <Footer />
     </div>
   );
