@@ -6,14 +6,22 @@ import {
   Heading,
   Image,
   Input,
+  useToast,
+  useDisclosure
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import styles from "./login.module.css";
 
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import {  useSelector } from "react-redux";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate()
+
+  const toast = useToast();
+    const { isOpen: isVisible, onClose, onOpen } = useDisclosure({ defaultisOpen: true });
+
+
   const [Login, setLogin] = useState({
     email: "",
     password: "",
@@ -23,11 +31,35 @@ const Login = () => {
     return store;
   });
 
-  const dispatch = useDispatch();
+  const calling = () =>{
+
+     navigate('/');
+  }
 
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(signUpData);
+    if (Login.email === "" || Login.password === ""){
+      return alert("Please Insert email & password");
+     }
+    signUpData.map((ele)=>{
+     
+      if (ele.email === Login.email && ele.password === Login.password ){
+        toast({
+          description: "You Login Successfully ",
+          status: "success",
+          duration: 2000,
+          isClosable: true
+      })
+      calling();
+      
+      }
+      else{
+        return alert("Wrong Credentials")
+      }
+      
+    })
+   
   };
   return (
     <div className={styles.background}>
@@ -38,7 +70,10 @@ const Login = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
+          <Link to={'/'} >
           <Image src="icon.png" w={"160px"} />
+          </Link>
+      
           <Link to={"/signup"}>
             <Text marginRight={"10px"} fontSize={"20px"} color={"white"}>
               Signup
@@ -64,6 +99,9 @@ const Login = () => {
                 type="password"
                 _placeholder={{ color: "white" }}
                 placeholder="Confirm Password"
+                onChange={(e) => {
+                  setLogin({ ...Login, password: e.target.value });
+                }}
               />
 
               <Button

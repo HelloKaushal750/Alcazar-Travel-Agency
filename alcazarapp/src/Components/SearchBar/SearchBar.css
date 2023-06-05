@@ -15,6 +15,9 @@
   flex-grow: 1;
   box-shadow: 0 0 0 0.75vw rgb(206, 206, 206);
   }
+ .loc:focus, .dt:focus, .nm:focus{
+    outline: none;
+  }
   
   .input-section {
     display: flex;
@@ -36,10 +39,12 @@
   
   .nm {
    width: 11.5vw;
+   color: black;
   }
   
   .dt {
     width: 11vw;
+    color: black;
   }
   
   button {
@@ -73,7 +78,7 @@
     display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0073ff;
+  background-color: rgb(28,160,227);
   border-radius: 50%;
   height: 3.5vw;
   width: 3.5vw;

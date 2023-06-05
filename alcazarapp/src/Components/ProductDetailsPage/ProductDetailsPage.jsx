@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import data from "../../db.json";
-
+import ShortNavbar from "../Navbar/ShortNavbar";
 import {
   Box,
   Image,
@@ -62,10 +62,10 @@ const ProductDetailsPage = () => {
     tickets: "",
     id: id,
     pricewithpassengers: "",
-    image:"",
-    location:"",
-    price:"",
-    description:""
+    image: "",
+    location: "",
+    price: "",
+    description: "",
   });
 
   console.log(bookingdata);
@@ -106,11 +106,16 @@ const ProductDetailsPage = () => {
 
   return (
     <div>
-     <div>
-      <Link to = {'/'}>
-     <div className='b2h'>Back To Home</div>
-     </Link>
-     </div>
+      <div
+        style={{
+          height: "600px",
+          backgroundImage: "url(https://wallpaperaccess.com/full/1192057.jpg)",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <ShortNavbar />
+      </div>
       <Box>
         <Box display={"flex"} flexDirection={"row"}>
           <Box margin={"20px 100px"} w={"50%"}>
@@ -346,11 +351,9 @@ const ProductDetailsPage = () => {
               50 % OFF on MASAI50
             </Highlight>
           </Box>
-          
         </Box>
-      
       </Box>
-      
+
       <Footer />
     </div>
   );

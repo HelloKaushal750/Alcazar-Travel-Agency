@@ -35,11 +35,12 @@ function SearchBar() {
           placeholder="City, destination or hotel name"
           value={searchQuery}
           onChange={handleSearch}
+          
         />
         <div className="divider"></div>
-        <input className="dt" type="text" placeholder="Date of Stay" />
+        <input className="dt" type="text"  placeholder="Date of Stay" />
         <div className="divider"></div>
-        <input className="nm" type="number" placeholder="Add guest" />
+        <input className="nm" type="number"  placeholder="Add guest" />
         <button className="sbt" type="submit" onClick={handleButtonClick}>
           <i className="button-icon fas fa-search"></i>
         </button>

@@ -20,7 +20,7 @@ import ReviewBooking from "./ReviewBooking";
 import Payment from "./Payment";
 import Confirmation from "./Confirmation";
 import "./CSS/BookingProcess.css";
-import Navbar from "../Navbar/Navbar";
+import ShortNavbar from "../Navbar/ShortNavbar";
 
 const steps = [
   { title: "Review Booking", description: "Step 1" },
@@ -48,7 +48,9 @@ function BookingProcess() {
 
   return (
     <div>
-      <Navbar />
+      <div style={{backgroundColor:"black"}}>
+      <ShortNavbar />
+      </div>
       <div className="booking-process-container">
         <Heading as="h2" size="md" marginBottom={10}>
           Book your Holidays in 4 Simple Steps

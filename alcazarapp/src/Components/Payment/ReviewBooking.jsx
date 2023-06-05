@@ -135,6 +135,7 @@ function ReviewBooking({ step }) {
                       padding: "10px",
                       fontSize: "12px",
                       height: "12px",
+                      color:"black"
                     }}
                     isDisabled={codeStatus === true}
                   >
@@ -196,6 +197,7 @@ function ReviewBooking({ step }) {
               justifyContent: "left",
               fontSize: "16px",
               height: "30px",
+              color:"rgb(28,160,227)"
             }}
             onClick={onToggle}
           >

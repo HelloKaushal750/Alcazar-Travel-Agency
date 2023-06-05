@@ -22,10 +22,10 @@ const Navbar = () => {
           
             <Flex alignItems={"center"} gap={"30px"}>
               <Link to={"/signup"}>
-                <Button style={{padding:"5px",height:"30px"}} variant='outline'>Signup</Button>
+                <Button style={{padding:"5px",height:"30px",border:"none"}} variant='outline'>Signup</Button>
               </Link>
               <Link to="/login">
-                <Button style={{padding:"5px",height:"30px"}} variant='outline'>Login</Button>
+                <Button style={{padding:"5px",height:"30px",border:"none"}} variant='outline'>Login</Button>
               </Link>
             </Flex>
           </Flex>
