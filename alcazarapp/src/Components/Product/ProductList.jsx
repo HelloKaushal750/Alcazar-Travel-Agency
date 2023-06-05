@@ -184,7 +184,7 @@ const ProductList = () => {
               
               <div className="card-content">
                 <div className="location">{product.location}</div>
-                <div className="price">{product.price}</div>
+                <div className="price">${product.price}</div>
               </div>
               </Link>
               <hr className="line" />

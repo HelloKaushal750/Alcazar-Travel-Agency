@@ -40,6 +40,7 @@ function BookingProcess() {
   });
 
   useEffect(() => {
+    
     setActiveStep(step);
   }, [step]);
 
@@ -48,7 +49,7 @@ function BookingProcess() {
 
   return (
     <div>
-      <div style={{backgroundColor:"black"}}>
+      <div style={{backgroundColor:"rgb(28,160,227)",color:"white"}}>
       <ShortNavbar />
       </div>
       <div className="booking-process-container">

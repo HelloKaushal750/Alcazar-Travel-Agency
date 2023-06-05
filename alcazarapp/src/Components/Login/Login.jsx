@@ -7,20 +7,28 @@ import {
   Image,
   Input,
   useToast,
-  useDisclosure
+  useDisclosure,
+} from "@chakra-ui/react";
+import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import styles from "./login.module.css";
 
-import {  useSelector } from "react-redux";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const navigate = useNavigate()
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = React.useRef();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const toast = useToast();
-    const { isOpen: isVisible, onClose, onOpen } = useDisclosure({ defaultisOpen: true });
-
 
   const [Login, setLogin] = useState({
     email: "",
@@ -31,35 +39,28 @@ const Login = () => {
     return store;
   });
 
-  const calling = () =>{
-
-     navigate('/');
-  }
+  // const calling = () => {
+  //   navigate("/");
+  // };
 
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(signUpData);
-    if (Login.email === "" || Login.password === ""){
+    if (Login.email === "" || Login.password === "") {
       return alert("Please Insert email & password");
-     }
-    signUpData.map((ele)=>{
-     
-      if (ele.email === Login.email && ele.password === Login.password ){
-        toast({
-          description: "You Login Successfully ",
-          status: "success",
-          duration: 2000,
-          isClosable: true
-      })
-      calling();
-      
+    }
+    signUpData.map((ele) => {
+      if (ele.email === Login.email && ele.password === Login.password) {
+        onOpen();
+        const arr = ele.name.split(" ");
+        dispatch({ type: "FIRSTBTN", payload: `Hello ${arr[0]}` });
+        dispatch({ type: "SECONDBTN", payload: false });
+        dispatch({ type: "USERNAME", payload: arr[0] });
+        // calling();
+      } else if (ele.email !== Login.email || ele.password !== Login.password) {
+        alert("Wrong Credentials");
       }
-      else{
-        return alert("Wrong Credentials")
-      }
-      
-    })
-   
+    });
   };
   return (
     <div className={styles.background}>
@@ -70,10 +71,10 @@ const Login = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Link to={'/'} >
-          <Image src="icon.png" w={"160px"} />
+          <Link to={"/"}>
+            <Image src="icon.png" w={"160px"} />
           </Link>
-      
+
           <Link to={"/signup"}>
             <Text marginRight={"10px"} fontSize={"20px"} color={"white"}>
               Signup
@@ -118,6 +119,32 @@ const Login = () => {
             </FormControl>
           </form>
         </Box>
+        <AlertDialog
+          isOpen={isOpen}
+          leastDestructiveRef={cancelRef}
+          onClose={onClose}
+        >
+          <AlertDialogOverlay>
+            <AlertDialogContent style={{display:"flex",flexDirection:"row", justifyContent:"space-between",alignItems:"center"}}>
+              <AlertDialogHeader
+                fontSize="lg"
+                fontWeight="bold"
+                color={"green"}
+                w={"80%"}
+              >
+                Login Successful
+              </AlertDialogHeader>
+
+              <AlertDialogFooter w={"20%"}>
+                <Link to={"/"}>
+                  <Button colorScheme="green" onClick={onClose} ml={3}>
+                    Ok
+                  </Button>
+                </Link>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialogOverlay>
+        </AlertDialog>
       </Box>
     </div>
   );

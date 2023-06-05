@@ -1,7 +1,7 @@
 @media (min-width: 1540px) {
 
 .BoxBox {
-  padding: 0 0 0 10vw;
+  margin: auto;
   width: 80vw;
 }
 
@@ -215,7 +215,7 @@
 @media (min-width: 1280px) and (max-width: 1540px) {
 
   .BoxBox {
-    padding: 0 0 0 10vw;
+    margin: auto;
     width: 80vw;
   }
   
@@ -429,7 +429,7 @@
   @media (min-width: 1075px) and (max-width: 1280px) {
 
     .BoxBox {
-      padding: 0 0 0 10vw;
+      margin: auto;
       width: 80vw;
     }
     
@@ -643,7 +643,7 @@
     @media (min-width: 920px) and (max-width: 1075px) {
 
       .BoxBox {
-        padding: 0 0 0 10vw;
+        margin: auto;
         width: 80vw;
       }
       
@@ -858,7 +858,7 @@
       @media (min-width: 740px) and (max-width: 920px) {
 
         .BoxBox {
-          padding: 0 0 0 10vw;
+          margin: auto;
           width: 80vw;
         }
         
@@ -1073,7 +1073,7 @@
         @media (min-width: 600px) and (max-width: 740px) {
 
           .BoxBox {
-            padding: 0 0 0 10vw;
+            margin: auto;
             width: 80vw;
           }
           
@@ -1094,7 +1094,7 @@
             justify-content: center;
             margin: 0 1vw 1vw 5vw;
           }
-          
+          filter-buttons
           .card img {
             width: 100%;
             height: 72%;
@@ -1288,7 +1288,7 @@
           @media (min-width: 500px) and (max-width: 640px) {
 
             .BoxBox {
-              padding: 0 0 0 10vw;
+              margin: auto;
               width: 80vw;
             }
             

@@ -17,6 +17,8 @@ const initialState = {
   bookingData: {},
   signUpData: [],
   bookingHistory: [],
+  firstBtn: "SignUp",
+  secondBtn: true,
 };
 
 const reducer = (store = initialState, action) => {
@@ -48,6 +50,12 @@ const reducer = (store = initialState, action) => {
         ...store,
         bookingHistory: [...store.bookingHistory, action.payload],
       };
+    case "FIRSTBTN":
+      return { ...store, firstBtn: action.payload };
+    case "SECONDBTN":
+      return { ...store, secondBtn: action.payload };
+    case "USERNAME":
+      return {...store, userName:action.payload};  
     default: {
       return store;
     }

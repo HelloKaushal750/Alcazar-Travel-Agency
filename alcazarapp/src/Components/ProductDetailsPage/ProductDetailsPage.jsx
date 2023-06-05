@@ -112,6 +112,7 @@ const ProductDetailsPage = () => {
           backgroundImage: "url(https://wallpaperaccess.com/full/1192057.jpg)",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          color:"white"
         }}
       >
         <ShortNavbar />
@@ -125,7 +126,7 @@ const ProductDetailsPage = () => {
               </Heading>
               <Badge fontSize={"20px"}>
                 {" "}
-                {currentProduct.price} / Per Person
+                $ {currentProduct.price} / Per Person
               </Badge>
             </Box>
             <Box marginBottom={"20px"} maxWidth={"700px"} textAlign={"left"}>
@@ -140,27 +141,27 @@ const ProductDetailsPage = () => {
                 <Table>
                   <Tbody>
                     <Tr>
-                      <Td style={{ fontWeight: "900" }}>Destination</Td>
+                      <Td style={{ fontWeight: "600" }}>Destination</Td>
                       <Td>{currentProduct.location}</Td>
                     </Tr>
                     <Tr>
-                      <Td style={{ fontWeight: "900" }}>Departure</Td>
+                      <Td style={{ fontWeight: "600" }}>Departure</Td>
                       <Td>Main Square,Old Town</Td>
                     </Tr>
                     <Tr>
-                      <Td style={{ fontWeight: "900" }}>Departure Time</Td>
+                      <Td style={{ fontWeight: "600" }}>Departure Time</Td>
                       <Td>Appr. 8.30AM </Td>
                     </Tr>
                     <Tr>
-                      <Td style={{ fontWeight: "900" }}>Return Time</Td>
+                      <Td style={{ fontWeight: "600" }}>Return Time</Td>
                       <Td>Appr. 7.30PM</Td>
                     </Tr>
                     <Tr>
-                      <Td style={{ fontWeight: "900" }}>Dress Code</Td>
+                      <Td style={{ fontWeight: "600" }}>Dress Code</Td>
                       <Td>Casual, Comfortable and Light</Td>
                     </Tr>
                     <Tr>
-                      <Td style={{ fontWeight: "900" }}>Included</Td>
+                      <Td style={{ fontWeight: "600" }}>Included</Td>
                       <Td>
                         <UnorderedList>
                           <ListItem p={"4px"}>5Star Accommodation</ListItem>

@@ -1,7 +1,8 @@
 .booking_middle_container {
   width: 60%;
   padding: 20px;
-  background-color: #ececec;
+  background-image: linear-gradient(to bottom, white, rgb(18, 17, 17));
+  background-size: cover;
 }
 .sugeestion_container {
   display: grid;

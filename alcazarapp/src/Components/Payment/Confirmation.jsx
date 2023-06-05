@@ -9,11 +9,16 @@ function Confirmation() {
   const bookingData = useSelector((state) => {
     return state.bookingData;
   });
+
+  const step = useSelector((state)=>{
+    return state.step
+  })
   const [date, setDate] = useState();
   useEffect(() => {
-    dispatch({type:"BOOKINGHISTORY",payload:bookingData})
+    dispatch({ type: "BOOKINGHISTORY", payload: bookingData });
     setDate(Date.now());
   }, []);
+  console.log(step);
   return (
     <div className="confirm-main-div">
       <div className="confirm-left-div">
@@ -40,27 +45,42 @@ function Confirmation() {
           Your transaction has been processed. Thankyou for choosing Alcazar
           Travel Agency.
         </p>
-        <Link to='/'><Button
-          onClick={() => {
-            dispatch({ type: "UPDATE_STEP", payload: 1 });
-          }}
-          style={{
-            backgroundColor: "rgb(28,160,227)",
-            borderRadius: "20px",
-            color: "white",
-            fontSize: "14px",
-            wclassNameth: "80px",
-          }}
-        >
-          Back to Home
-        </Button></Link>
+        <Link to="/">
+          <Button
+            style={{
+              backgroundColor: "rgb(28,160,227)",
+              borderRadius: "20px",
+              color: "white",
+              fontSize: "14px",
+              wclassNameth: "80px",
+            }}
+            onClick={()=>{dispatch({ type: "UPDATE_STEP", payload: -4 });}}
+          >
+            Back to Home
+          </Button>
+        </Link>
       </div>
       <div className="confirm-right-div">
-        <div style={{ textAlign: "left", marginBottom: "20px", display:"flex", justifyContent:"space-between" }}>
-          <h1 style={{ fontSize: "25px", fontWeight: "600", color:"black" }}>
+        <div
+          style={{
+            textAlign: "left",
+            marginBottom: "20px",
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <h1 style={{ fontSize: "25px", fontWeight: "600", color: "black" }}>
             Payment Information
           </h1>
-          <h1 style={{ fontSize: "20px", fontWeight: "600",color:"rgb(28,160,227)" }}>Alcazar</h1>
+          <h1
+            style={{
+              fontSize: "20px",
+              fontWeight: "600",
+              color: "rgb(28,160,227)",
+            }}
+          >
+            Alcazar
+          </h1>
         </div>
         <div>
           <table>
@@ -138,8 +158,7 @@ function Confirmation() {
               Get our assistance for any query
             </h1>
             <button style={{ fontSize: "18px" }}>
-              <i class="fa-solid fa-phone"></i>&nbsp;
-              Want us to call you ?
+              <i class="fa-solid fa-phone"></i>&nbsp; Want us to call you ?
             </button>
           </div>
           <div>
