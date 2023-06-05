@@ -10,7 +10,7 @@ function SearchResultsPage() {
 
   return (
     <div>
-      <div style={{ backgroundColor: "black" }}>
+      <div style={{ backgroundColor: "rgb(28,160,227)" }}>
         <ShortNavbar />
       </div>
       <div className="BoxBox">

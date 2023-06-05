@@ -9,8 +9,8 @@
   padding: 10px;
   border-radius: 8px;
   position: relative;
-  width: 20vw;
-  height: 16vw;
+  width: 18vw;
+  height: 14vw;
   margin-bottom: 1.5vw;
 }
 
@@ -18,7 +18,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(20vw, 1fr));
   grid-column-gap: 1vw;
-  grid-row-gap: 5vw;
+  grid-row-gap: 3.9vw;
   justify-content: center;
   margin: 0 1vw 1vw 5vw;
 }
@@ -38,13 +38,13 @@
 
 .card-content .location {
   font-weight: bold;
-  font-size: 0.8vw;
+  font-size: 0.6vw;
 }
 
 .card-content .price {
   color: #0b0a0a;
   font-weight: bold;
-  font-size: 0.8vw;
+  font-size: 0.6vw;
 }
 
 .card p {
@@ -59,7 +59,7 @@
   background-color: transparent;
   padding: 0;
   cursor: pointer;
-  color: #0051ff;
+  color:rgb(28,160,227);
   font-size: 0.6vw;
 }
 
@@ -69,7 +69,7 @@
 
 .pagination {
   display: flex;
-  margin-top: 2.2vw;
+  margin-top: 1.6vw;
   font-size: 0.8vw;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .page-number.active {
-  background-color: #007ff7;
+  background-color: rgb(28,160,227);
   color: #fff;
 }
 
@@ -134,22 +134,22 @@
 
 .headingA {
   text-align: center;
-  font-size: 3vw;
-  margin-bottom: 1.5vw;
-  margin-top: 2vw;
+  font-size: 2vw;
+  margin-bottom: 1.7vw;
+  margin-top: 0.2vw;
 }
 
 .headingb {
   text-align: center;
   color: #6e6e6e;
   font-weight: light;
-  font-size: 0.75vw;
-  margin-bottom: 3vw;
+  font-size: 0.6vw;
+  margin-bottom: 2vw;
 }
 
 .filter-buttons {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   justify-content: center;
 }
 
@@ -184,26 +184,26 @@
 }
 
 .filter-button.active {
-  background-color: #007ff7;
+  background-color:rgb(28,160,227);
   color: white;
 }
 .filter-buttonA.active {
-  background-color: #007ff7;
+  background-color: rgb(28,160,227);
   color: white;
 }
 
 .filter-button.active {
-  background-color: #007ff7;
+  background-color: rgb(28,160,227);
   color: white;
 }
 
 .filter-buttont.active {
-  background-color: #007ff7;
+  background-color: rgb(28,160,227);
   color: white;
 }
 
 .filter-buttond.active {
-  background-color: #007ff7;
+  background-color: rgb(28,160,227);
   color: white;
 }
 
@@ -273,7 +273,7 @@
     background-color: transparent;
     padding: 0;
     cursor: pointer;
-    color: #0051ff;
+    color: rgb(28,160,227);
     font-size: 0.6vw;
   }
   
@@ -302,7 +302,7 @@
   }
   
   .page-number.active {
-    background-color: #007ff7;
+    background-color: rgb(28,160,227);
     color: #fff;
   }
   
@@ -398,26 +398,26 @@
   }
   
   .filter-button.active {
-    background-color: #007ff7;
+    background-color: rgb(28,160,227);
     color: white;
   }
   .filter-buttonA.active {
-    background-color: #007ff7;
+    background-color: rgb(28,160,227);
     color: white;
   }
   
   .filter-button.active {
-    background-color: #007ff7;
+    background-color: rgb(28,160,227);
     color: white;
   }
   
   .filter-buttont.active {
-    background-color: #007ff7;
+    background-color: rgb(28,160,227);
     color: white;
   }
   
   .filter-buttond.active {
-    background-color: #007ff7;
+    background-color: rgb(28,160,227);
     color: white;
   }
   
@@ -487,7 +487,7 @@
       background-color: transparent;
       padding: 0;
       cursor: pointer;
-      color: #0051ff;
+      color: rgb(28,160,227);
       font-size: 0.6vw;
     }
     
@@ -516,7 +516,7 @@
     }
     
     .page-number.active {
-      background-color: #007ff7;
+      background-color: rgb(28,160,227);
       color: #fff;
     }
     
@@ -613,26 +613,26 @@
     }
     
     .filter-button.active {
-      background-color: #007ff7;
+      background-color: rgb(28,160,227);
       color: white;
     }
     .filter-buttonA.active {
-      background-color: #007ff7;
+      background-color: rgb(28,160,227);
       color: white;
     }
     
     .filter-button.active {
-      background-color: #007ff7;
+      background-color: rgb(28,160,227);
       color: white;
     }
     
     .filter-buttont.active {
-      background-color: #007ff7;
+      background-color: rgb(28,160,227);
       color: white;
     }
     
     .filter-buttond.active {
-      background-color: #007ff7;
+      background-color: rgb(28,160,227);
       color: white;
     }
     
@@ -701,7 +701,7 @@
         background-color: transparent;
         padding: 0;
         cursor: pointer;
-        color: #0051ff;
+        color: rgb(28,160,227);
         font-size: 0.6vw;
       }
       
@@ -730,7 +730,7 @@
       }
       
       .page-number.active {
-        background-color: #007ff7;
+        background-color: rgb(28,160,227);
         color: #fff;
       }
       
@@ -827,26 +827,26 @@
       }
       
       .filter-button.active {
-        background-color: #007ff7;
+        background-color: rgb(28,160,227);
         color: white;
       }
       .filter-buttonA.active {
-        background-color: #007ff7;
+        background-color: rgb(28,160,227);
         color: white;
       }
       
       .filter-button.active {
-        background-color: #007ff7;
+        background-color: rgb(28,160,227);
         color: white;
       }
       
       .filter-buttont.active {
-        background-color: #007ff7;
+        background-color: rgb(28,160,227);
         color: white;
       }
       
       .filter-buttond.active {
-        background-color: #007ff7;
+        background-color: rgb(28,160,227);
         color: white;
       }
       
@@ -916,7 +916,7 @@
           background-color: transparent;
           padding: 0;
           cursor: pointer;
-          color: #0051ff;
+          color: rgb(28,160,227);
           font-size: 0.6vw;
         }
         
@@ -945,7 +945,7 @@
         }
         
         .page-number.active {
-          background-color: #007ff7;
+          background-color: rgb(28,160,227);
           color: #fff;
         }
         
@@ -1042,26 +1042,26 @@
         }
         
         .filter-button.active {
-          background-color: #007ff7;
+          background-color: rgb(28,160,227);
           color: white;
         }
         .filter-buttonA.active {
-          background-color: #007ff7;
+          background-color: rgb(28,160,227);
           color: white;
         }
         
         .filter-button.active {
-          background-color: #007ff7;
+          background-color: rgb(28,160,227);
           color: white;
         }
         
         .filter-buttont.active {
-          background-color: #007ff7;
+          background-color: rgb(28,160,227);
           color: white;
         }
         
         .filter-buttond.active {
-          background-color: #007ff7;
+          background-color: rgb(28,160,227);
           color: white;
         }
         
@@ -1131,7 +1131,7 @@
             background-color: transparent;
             padding: 0;
             cursor: pointer;
-            color: #0051ff;
+            color: rgb(28,160,227);
             font-size: 0.6vw;
           }
           
@@ -1160,7 +1160,7 @@
           }
           
           .page-number.active {
-            background-color: #007ff7;
+            background-color: rgb(28,160,227);
             color: #fff;
           }
           
@@ -1257,26 +1257,26 @@
           }
           
           .filter-button.active {
-            background-color: #007ff7;
+            background-color: rgb(28,160,227);
             color: white;
           }
           .filter-buttonA.active {
-            background-color: #007ff7;
+            background-color: rgb(28,160,227);
             color: white;
           }
           
           .filter-button.active {
-            background-color: #007ff7;
+            background-color: rgb(28,160,227);
             color: white;
           }
           
           .filter-buttont.active {
-            background-color: #007ff7;
+            background-color: rgb(28,160,227);
             color: white;
           }
           
           .filter-buttond.active {
-            background-color: #007ff7;
+            background-color: rgb(28,160,227);
             color: white;
           }
           
@@ -1346,7 +1346,7 @@
               background-color: transparent;
               padding: 0;
               cursor: pointer;
-              color: #0051ff;
+              color: rgb(28,160,227);
               font-size: 0.6vw;
             }
             
@@ -1375,7 +1375,7 @@
             }
             
             .page-number.active {
-              background-color: #007ff7;
+              background-color: rgb(28,160,227);
               color: #fff;
             }
             
@@ -1472,26 +1472,26 @@
             }
             
             .filter-button.active {
-              background-color: #007ff7;
+              background-color: rgb(28,160,227);
               color: white;
             }
             .filter-buttonA.active {
-              background-color: #007ff7;
+              background-color: rgb(28,160,227);
               color: white;
             }
             
             .filter-button.active {
-              background-color: #007ff7;
+              background-color: rgb(28,160,227);
               color: white;
             }
             
             .filter-buttont.active {
-              background-color: #007ff7;
+              background-color: rgb(28,160,227);
               color: white;
             }
             
             .filter-buttond.active {
-              background-color: #007ff7;
+              background-color: rgb(28,160,227);
               color: white;
             }
             
