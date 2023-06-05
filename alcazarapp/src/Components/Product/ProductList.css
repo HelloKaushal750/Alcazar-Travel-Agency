@@ -12,6 +12,7 @@
   width: 18vw;
   height: 14vw;
   margin-bottom: 1.5vw;
+  margin-left: 1.6vw;
 }
 
 .card-grid {
@@ -114,6 +115,7 @@
   padding: 1vw;
   margin-right: 19vw;
   margin-left: 5vw;
+  margin-right: 24vw;
   font-size: 0.8vw;
 }
 .round-button.last-page {
@@ -128,7 +130,7 @@
   border-radius: 30px;
   padding: 1vw;
   align-self: flex-end;
-  margin-left: 19vw;
+  margin-left: 23.5vw;
   font-size: 0.8vw;
 }
 
